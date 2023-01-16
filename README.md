@@ -28,12 +28,51 @@ React Concepts/Principles - 4:
       "Declare the state and react will reflect it in the browser"
       Key Principle : Dont manipulate the DOM in react.
       
-  2. Components
-      React website is composed from small components.
-      Reusable components.
+  2. Component Architecture
+        React website is composed from small components/react components.
+      Reusable components. 
       
       Each component is a javascript functions that takes 
-      data(state/props) and returns representation of UI in javascript (JSX).
+      data(state/props) and returns representation of UI in javascript (JSX) - HTML syntax.
+      This Jsx is converted into native Javascript objects by using Babel compiler.
+     
+     Componet -> takes State -> Returns JSX
+     
+     React.js uses the state and the components to create a virtual DOM.
+     i.e,  
+     function React(state, components) {} => Virtual DOM, java script version of DOM. Not real browser DOM.
+     React uses this virtual DOM to update browsers DOM.
+     
+  3. Unidirectional Data Flow
+       - React components will render based on state.
+            If user modifies the state in the website, the DOM is not updated directly. 
+       The state is updated instead.
+       Whenever there is a change in the state, the component is rerendered reflecting the user modifications.
+       
+      Data Flow:
+      Website rendered -> user interaction -> react tells about the change -> data updated in state -> react rerenders     
+     
+        This is equivalent to Source Binding in WPF. Source changed, Control Changed. Control will not update the state directly.)
+      
+     - Data is undirectional and restricts to moves from top to bottom.
+     
+     
+ 4. React JS is only a UI Library and not a framework. Can be used as View or Front End development for any stack.
+ In Short, React is a library which creates a virtual DOM(Core react.js) and updates the browser DOM(reactDom.js).
+ In react, all that needed is 2 libraries - react.js and reactDom.js.
+ 
+ Libraries similar to React - Angular and Vue.
+ 
+ Think in React:
+ 
+ 1. Decide on Components. 
+ 2. Decide the state and where we can have the state in virtual DOM
+ 3. What part of virtual DOM should be changed when a state is changed. 
+  
+  
+  
+  
+  
       
       
       
